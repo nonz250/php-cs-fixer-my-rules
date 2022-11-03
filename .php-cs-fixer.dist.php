@@ -126,7 +126,18 @@ $rules = [
     'phpdoc_order_by_value' => true,
     'phpdoc_return_self_reference' => true,
     'phpdoc_scalar' => true,
-    'phpdoc_separation' => true,
+    'phpdoc_separation' => ['groups' => [
+        [
+            'deprecated',
+            'see',
+        ],
+        [
+            'param',
+            'throw',
+            'throws',
+            'return',
+        ]
+    ]],
     'phpdoc_single_line_var_spacing' => true,
     'phpdoc_summary' => true,
     'phpdoc_tag_type' => true,
